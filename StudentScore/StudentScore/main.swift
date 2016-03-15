@@ -25,5 +25,8 @@ studentList.append(Student(name: "雷尼玛", scoreEnglish: 89, scoreMath: 95))
 //按平均分从低到高排序
 studentList = bubbleSort(studentList)
 //打印学生信息
-printfList(studentList)
+//printfList(studentList)
 
+for student in studentList{
+    student.printfSelf()
+}

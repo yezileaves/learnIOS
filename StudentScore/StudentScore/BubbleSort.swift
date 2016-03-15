@@ -12,12 +12,12 @@ import Foundation
 //内层循环负责把最大的结构体放在最后，之后到此最大，如此最小的就冒上来了
 func bubbleSort(var sortList:Array<Student>)->Array<Student>{
     var studentTemp = Student()
-    for coutOut in 1...9{
-        for coutIn in 1...(10-coutOut){
-            if sortList[coutIn-1].scoreEnglish+sortList[coutIn-1].scoreMath > sortList[coutIn].scoreEnglish+sortList[coutIn].scoreMath{
-                       studentTemp = sortList[coutIn-1]
+    for coutOut in 1...(sortList.count - 1){
+        for coutIn in 1...(sortList.count-coutOut){
+            if sortList[coutIn-1].average > sortList[coutIn].average{
+                studentTemp = sortList[coutIn-1]
                 sortList[coutIn-1] = sortList[coutIn]
-                  sortList[coutIn] = studentTemp
+                sortList[coutIn] = studentTemp
                 }
             }
         }
