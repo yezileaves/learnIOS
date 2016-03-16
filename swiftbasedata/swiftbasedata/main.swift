@@ -18,4 +18,8 @@ import Foundation
 
 //string()
 
-print("hello yezi")
+classFunc()
+
+//stringExtension()
+
+//print("hello yezi")

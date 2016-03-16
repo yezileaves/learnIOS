@@ -13,6 +13,10 @@
 		F8EA93DF1C95B8DC0012AC01 /* Loop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA93DE1C95B8DC0012AC01 /* Loop.swift */; };
 		F8EA93E11C95BF030012AC01 /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA93E01C95BF030012AC01 /* Optional.swift */; };
 		F8EA93E31C95C3700012AC01 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA93E21C95C3700012AC01 /* String.swift */; };
+		F8EA940F1C997DE60012AC01 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA940E1C997DE60012AC01 /* Class.swift */; };
+		F8EA94111C9981C20012AC01 /* ClassFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA94101C9981C20012AC01 /* ClassFunc.swift */; };
+		F8EA94131C9996B00012AC01 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA94121C9996B00012AC01 /* StringExtension.swift */; };
+		F8EA94151C999AC70012AC01 /* HumanProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA94141C999AC70012AC01 /* HumanProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +39,10 @@
 		F8EA93DE1C95B8DC0012AC01 /* Loop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loop.swift; sourceTree = "<group>"; };
 		F8EA93E01C95BF030012AC01 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		F8EA93E21C95C3700012AC01 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F8EA940E1C997DE60012AC01 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		F8EA94101C9981C20012AC01 /* ClassFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassFunc.swift; sourceTree = "<group>"; };
+		F8EA94121C9996B00012AC01 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F8EA94141C999AC70012AC01 /* HumanProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,10 @@
 				F8EA93DE1C95B8DC0012AC01 /* Loop.swift */,
 				F8EA93E01C95BF030012AC01 /* Optional.swift */,
 				F8EA93E21C95C3700012AC01 /* String.swift */,
+				F8EA940E1C997DE60012AC01 /* Class.swift */,
+				F8EA94101C9981C20012AC01 /* ClassFunc.swift */,
+				F8EA94121C9996B00012AC01 /* StringExtension.swift */,
+				F8EA94141C999AC70012AC01 /* HumanProtocol.swift */,
 			);
 			path = swiftbasedata;
 			sourceTree = "<group>";
@@ -136,10 +148,14 @@
 			files = (
 				F8EA93E31C95C3700012AC01 /* String.swift in Sources */,
 				F8EA93DD1C95B8360012AC01 /* basedate.swift in Sources */,
+				F8EA940F1C997DE60012AC01 /* Class.swift in Sources */,
 				F8EA93E11C95BF030012AC01 /* Optional.swift in Sources */,
+				F8EA94111C9981C20012AC01 /* ClassFunc.swift in Sources */,
+				F8EA94131C9996B00012AC01 /* StringExtension.swift in Sources */,
 				F8EA93DB1C95B3910012AC01 /* ControFlow.swift in Sources */,
 				F8EA93D41C95AB600012AC01 /* main.swift in Sources */,
 				F8EA93DF1C95B8DC0012AC01 /* Loop.swift in Sources */,
+				F8EA94151C999AC70012AC01 /* HumanProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +275,7 @@
 				F8EA93D91C95AB600012AC01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

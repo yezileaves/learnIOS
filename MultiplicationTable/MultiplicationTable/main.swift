@@ -26,7 +26,7 @@ import Foundation
 
 for var mulOut in 1...9 {
     for var mulIn in 1...mulOut{
-        print("\(mulIn)*\(mulOut)=\(mulIn*mulOut)",terminator:" ")
+        print("\(mulIn)*\(mulOut)=\(mulIn*mulOut)\t",terminator:" ")
     }
     print("")
 }

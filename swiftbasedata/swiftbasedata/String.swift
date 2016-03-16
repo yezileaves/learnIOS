@@ -42,6 +42,6 @@ func string(){
     }
     
 //Emoji表情
-    var smile = "😬📷"
+    let smile = "😬📷"
     print(smile)
 }
