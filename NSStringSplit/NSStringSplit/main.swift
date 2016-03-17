@@ -8,7 +8,11 @@
 
 import Foundation
 
-var str = "yezi&yezi&leaves"
+var str:NSString = "yezi&&yezi&&leaves"
+let result = str.split("&&")
 
+for subStr in result {
+    print(subStr)
+}
 
 

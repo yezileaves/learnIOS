@@ -20,6 +20,7 @@ func string(){
     let subString3 = swiftStr.substringWithRange(startIndex.advancedBy(2)...startIndex.advancedBy(5))
     let subString4 = ocStr.substringWithRange(NSRange(location: 2, length: 3))
     print(subString,subString2,subString3,subString4)
+    print(swiftStr[startIndex])
     
 //分割字符串
     let resulArr = swiftStr.characters.split(" ")
