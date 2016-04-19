@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F859FDD81CA434D300464D3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F859FDD71CA434D300464D3A /* main.m */; };
 		F859FDE01CA434F400464D3A /* Array.c in Sources */ = {isa = PBXBuildFile; fileRef = F859FDDE1CA434F400464D3A /* Array.c */; };
+		F859FDE31CA5862500464D3A /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = F859FDE11CA5862500464D3A /* Object.c */; };
+		F859FDE61CA5897700464D3A /* Mydate.c in Sources */ = {isa = PBXBuildFile; fileRef = F859FDE41CA5897700464D3A /* Mydate.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		F859FDD71CA434D300464D3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F859FDDE1CA434F400464D3A /* Array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Array.c; sourceTree = "<group>"; };
 		F859FDDF1CA434F400464D3A /* Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array.h; sourceTree = "<group>"; };
+		F859FDE11CA5862500464D3A /* Object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
+		F859FDE21CA5862500464D3A /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		F859FDE41CA5897700464D3A /* Mydate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Mydate.c; sourceTree = "<group>"; };
+		F859FDE51CA5897700464D3A /* Mydate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mydate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				F859FDD71CA434D300464D3A /* main.m */,
 				F859FDDE1CA434F400464D3A /* Array.c */,
 				F859FDDF1CA434F400464D3A /* Array.h */,
+				F859FDE11CA5862500464D3A /* Object.c */,
+				F859FDE21CA5862500464D3A /* Object.h */,
+				F859FDE41CA5897700464D3A /* Mydate.c */,
+				F859FDE51CA5897700464D3A /* Mydate.h */,
 			);
 			path = DynamicArray;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F859FDD81CA434D300464D3A /* main.m in Sources */,
+				F859FDE61CA5897700464D3A /* Mydate.c in Sources */,
+				F859FDE31CA5862500464D3A /* Object.c in Sources */,
 				F859FDE01CA434F400464D3A /* Array.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,8 +10,9 @@
 #define Array_h
 
 #include <stdio.h>
+#include "Object.h"
 
-typedef void* AnyPointer;
+typedef Object* AnyPointer;
 
 typedef struct Array_ {
     int length_;
@@ -22,7 +23,12 @@ typedef struct Array_ {
 Array *ArrayCreate();
 int ArrayGetLength(Array *arr);
 void ArrayAdd(Array *arr,AnyPointer value);
+void ArrayRemoveAt(Array *arr,int index);
 AnyPointer ArrayGet(Array *arr,int index);
 void ArrayDestroy(Array *arr);
+void ArrayQuery(Array *arr,int index);
+void ArrayInsert(Array *arr,AnyPointer value,int index);
+void ArrayChange(Array *arr,AnyPointer value,int index);
+void ArrayPrintf();
 
 #endif /* Array_h */
