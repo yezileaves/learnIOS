@@ -125,7 +125,12 @@ void hashmap_remove(Hashmap this,char *k) {
             e->next = NULL;
             this->size--;
             free(e);
+            //第二次修改，只要找到要删除的key就跳出循环，防止出现指针使用不当
+            break;
         }
+    }
+    if(e == NULL) {
+        printf("没有找到相应的key\n");
     }
 }
 
@@ -134,8 +139,15 @@ void hashmap_free(Hashmap this) {
     int i;
     Entry e,item;
     for (i = 0;i < this->capacity;i++) {
-        for (e = this->table + i,e = e->next;e != NULL;e = e->next) {
+//        for (e = this->table + i,e = e->next;e != NULL;e = e->next;) {
+//            item = e;
+//            free(item);
+//        }
+        //把for循环改成while循环，并且修正了指针free了又使用的情况
+        e = this->table + i,e = e->next;
+        while (e != NULL) {
             item = e;
+            e = e->next;
             free(item);
         }
     }

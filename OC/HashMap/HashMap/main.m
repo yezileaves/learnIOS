@@ -25,7 +25,8 @@ int main(int argc, const char * argv[]) {
         Student student = StudensGet((MyDate *)hashmap_get(map,"wang"));
         printf("age:%d name:%s\n",student.age,student.name);
         
-        hashmap_remove(map,"wang");
+        hashmap_remove(map,"yezi");
+        hashmap_remove(map, "wang");
         hashmap_free(map);
 
     }
