@@ -18,4 +18,5 @@ typedef struct _hashmap {
 Hashmap hashmap_init();
 void hashmap_put(Hashmap this,void *k,void *v);
 void *hashmap_get(Hashmap this,void *k);
+void hashmap_remove(Hashmap this,void *k);
 void hashmap_free(Hashmap this);

@@ -5,6 +5,7 @@ int main(int argc, const char *argv[])
 	Hashmap map = hashmap_init();
 	hashmap_put(map,"yezi","1");
 	printf("value:%d\n",(int)hashmap_get(map,"yezi"));
+	hashmap_remove(map,"yezi");
 	hashmap_free(map);
 	return 0;
 }
@@ -75,8 +76,8 @@ void *hashmap_get(Hashmap this,void *k) {
 		if (e->hash == hashcode && (e->key == k || strcmp(e->key,k) == 0)) {
 			return e->value;
 		}
-		return NULL;
 	}
+	return NULL;
 }
 
 Hashmap hashmap_init() {
@@ -89,6 +90,25 @@ Hashmap hashmap_init() {
 		(map->table + i)->next = NULL;
 	}
 	return map;
+}
+
+void hashmap_remove(Hashmap this,void *k) {
+	int hashcode,i;
+	Entry e,preE;
+	hashcode = hashCode(k);
+	i = indexFor(hashcode,this->capacity);
+	for (e = this->table + i,preE = e,e = e->next;e != NULL;preE = e,e = e->next) {
+		if (e->hash == hashcode && (e->key == k || strcmp(e->key,k) == 0)) {
+			if (e->next == NULL) {
+				preE->next = NULL;
+			}else {
+				preE->next = e->next;
+			}
+			e->next = NULL;
+			this->size--;
+			free(e);
+		}
+	}
 }
 
 void hashmap_free(Hashmap this) {
