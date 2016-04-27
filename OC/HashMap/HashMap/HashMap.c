@@ -8,6 +8,7 @@
 
 #include "HashMap.h"
 
+//计算hash值，把每个字母对应的assicii值相加
 int hashCode(char *pStr) {
     int i,h = 0;
     int size = (int)strlen(pStr);
@@ -16,17 +17,18 @@ int hashCode(char *pStr) {
         return 0;
     else {
         for (i = 0;i < size; i++) {
-            //h = 31 * h + *pStr++;
             h += *pStr++;
         }
         return h;
     }
 }
 
+//通过哈西值计算出该把数据放在数组哪个位置
 int indexFor(int h,int length) {
     return h % (length -1);
 }
 
+//把数据通过尾插法放在相应的链表中，并注意使用引用计数来管理内存；
 void addEntry(Hashmap this,char *k,AnyPointer v,int hashcode,int i)
 {
     Entry item = malloc(sizeof(struct _entry));
@@ -49,29 +51,36 @@ void addEntry(Hashmap this,char *k,AnyPointer v,int hashcode,int i)
     OBJECT_RETAIN(v);
 }
 
-void hashmap_put(Hashmap this,char *k,AnyPointer v) {
+//通过key的哈西值，把数据放在hashmap中，如果key值一样就替换原来的数据；
+AnyPointer hashmap_put(Hashmap this,char *k,AnyPointer v) {
     int hashcode,i;
     Entry e;
     AnyPointer oldValue;
+    //计算字符串哈西值
     hashcode = hashCode(k);
+    //把哈西值转换为数组下角标
     i = indexFor(hashcode,this->capacity);
-    printf("hashcode:%d i:%d\n",hashcode,i);
+    //查找是否已经有key值，如果有了就更新数据
     for (e = this->table + i,e = e->next;e != NULL;e = e->next) {
         if ((e->hash == hashcode) && (e->key == k || strcmp(e->key,k) == 0)) {
             oldValue = e->value;
             e->value = v;
             
-            //return oldValue;
+            return oldValue;
         }
     }
+    //添加数据
     addEntry(this ,k,v,hashcode,i);
-    //return NULL;
+    return NULL;
 }
+
+//通过key值获取到再hashmap中的数据
 AnyPointer hashmap_get(Hashmap this,char *k) {
     int hashcode,i;
     Entry e;
     hashcode = hashCode(k);
     i = indexFor(hashcode,this->capacity);
+    
     for (e = this->table + i,e = e->next;e != NULL;e = e->next) {
         if (e->hash == hashcode && (e->key == k || strcmp(e->key,k) == 0)) {
             return e->value;
@@ -82,6 +91,7 @@ AnyPointer hashmap_get(Hashmap this,char *k) {
     return NULL;
 }
 
+//初始化hashmap规定数组空间大小为16；
 Hashmap hashmap_init() {
     int i;
     Hashmap map = malloc(sizeof(struct _hashmap));
@@ -94,13 +104,18 @@ Hashmap hashmap_init() {
     return map;
 }
 
+//移除数据，并注意使用引用计数进行内存管理
 void hashmap_remove(Hashmap this,char *k) {
     int hashcode,i;
     Entry e,preE;
     hashcode = hashCode(k);
     i = indexFor(hashcode,this->capacity);
+    
     for (e = this->table + i,preE = e,e = e->next;e != NULL;preE = e,e = e->next) {
         if (e->hash == hashcode && (e->key == k || strcmp(e->key,k) == 0)) {
+/*老师感觉这里引用计数是不是用得有问题啊，我这里如果用完free，后面又
+ *free（e）是不是有点问题啊？
+*/
             OBJECT_RELEASE(hashmap_get(this, k));
             if (e->next == NULL) {
                 preE->next = NULL;
@@ -114,6 +129,7 @@ void hashmap_remove(Hashmap this,char *k) {
     }
 }
 
+//释放整个hashmap;
 void hashmap_free(Hashmap this) {
     int i;
     Entry e,item;

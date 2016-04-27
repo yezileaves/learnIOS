@@ -30,7 +30,7 @@ typedef struct _hashmap {
 } *Hashmap;
 
 Hashmap hashmap_init();
-void hashmap_put(Hashmap this,char *k,AnyPointer v);
+AnyPointer hashmap_put(Hashmap this,char *k,AnyPointer v);
 AnyPointer hashmap_get(Hashmap this,char *k);
 void hashmap_remove(Hashmap this,char *k);
 void hashmap_free(Hashmap this);

@@ -11,6 +11,7 @@
 #include "Object.h"
 #include "MyDate.h"
 
+//参考之前写过的动态数组的引用计数方法，和数据的包装，还有之前的链表实现
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Hashmap map = hashmap_init();
