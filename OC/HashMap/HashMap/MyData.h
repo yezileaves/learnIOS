@@ -6,8 +6,8 @@
 //  Copyright © 2016年 yezi. All rights reserved.
 //
 
-#ifndef MyDate_h
-#define MyDate_h
+#ifndef MyData_h
+#define MyData_h
 
 #include <stdio.h>
 

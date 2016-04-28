@@ -116,7 +116,6 @@ void hashmap_remove(Hashmap this,char *k) {
 /*老师感觉这里引用计数是不是用得有问题啊，我这里如果用完free，后面又
  *free（e）是不是有点问题啊？
 */
-            OBJECT_RELEASE(hashmap_get(this, k));
             if (e->next == NULL) {
                 preE->next = NULL;
             }else {
@@ -124,6 +123,7 @@ void hashmap_remove(Hashmap this,char *k) {
             }
             e->next = NULL;
             this->size--;
+            OBJECT_RELEASE(e->value);
             free(e);
             //第二次修改，只要找到要删除的key就跳出循环，防止出现指针使用不当
             break;

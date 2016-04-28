@@ -86,7 +86,7 @@ int main(int argc, const char * argv[]) {
         ArrayPrintf(arr);
         
         //测试数组的更改功能，再遍历一遍数组
-        printf("把位置6的小王子更改为老王子\n");
+        printf("把位置6的小王子更改为老王子%d\n",OBJECT_RETAINCOUNT(intValue));
         intValue = StudensNew(student10);
         ArrayChange(arr,(Object*)intValue,5);
         ArrayPrintf(arr);

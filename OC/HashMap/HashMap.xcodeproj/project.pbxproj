@@ -10,7 +10,7 @@
 		F8B864751CC846F600BB8E39 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B864741CC846F600BB8E39 /* main.m */; };
 		F8B8647D1CC8473100BB8E39 /* HashMap.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B8647B1CC8473100BB8E39 /* HashMap.c */; };
 		F8B864801CD0FD2700BB8E39 /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B8647E1CD0FD2700BB8E39 /* Object.c */; };
-		F8B864831CD0FEA300BB8E39 /* MyDate.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B864811CD0FEA300BB8E39 /* MyDate.c */; };
+		F8B864831CD0FEA300BB8E39 /* MyData.c in Sources */ = {isa = PBXBuildFile; fileRef = F8B864811CD0FEA300BB8E39 /* MyData.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +32,8 @@
 		F8B8647C1CC8473100BB8E39 /* HashMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashMap.h; sourceTree = "<group>"; };
 		F8B8647E1CD0FD2700BB8E39 /* Object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
 		F8B8647F1CD0FD2700BB8E39 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
-		F8B864811CD0FEA300BB8E39 /* MyDate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyDate.c; sourceTree = "<group>"; };
-		F8B864821CD0FEA300BB8E39 /* MyDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDate.h; sourceTree = "<group>"; };
+		F8B864811CD0FEA300BB8E39 /* MyData.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MyData.c; sourceTree = "<group>"; };
+		F8B864821CD0FEA300BB8E39 /* MyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyData.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +71,8 @@
 				F8B8647C1CC8473100BB8E39 /* HashMap.h */,
 				F8B8647E1CD0FD2700BB8E39 /* Object.c */,
 				F8B8647F1CD0FD2700BB8E39 /* Object.h */,
-				F8B864811CD0FEA300BB8E39 /* MyDate.c */,
-				F8B864821CD0FEA300BB8E39 /* MyDate.h */,
+				F8B864811CD0FEA300BB8E39 /* MyData.c */,
+				F8B864821CD0FEA300BB8E39 /* MyData.h */,
 			);
 			path = HashMap;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B8647D1CC8473100BB8E39 /* HashMap.c in Sources */,
-				F8B864831CD0FEA300BB8E39 /* MyDate.c in Sources */,
+				F8B864831CD0FEA300BB8E39 /* MyData.c in Sources */,
 				F8B864801CD0FD2700BB8E39 /* Object.c in Sources */,
 				F8B864751CC846F600BB8E39 /* main.m in Sources */,
 			);
